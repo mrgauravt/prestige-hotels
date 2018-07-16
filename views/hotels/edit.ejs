@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= hotel.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/hotel_list/<%= hotel._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label>Hotel's Name: </label>
+                    <input class="form-control" type="text" name="hotel[name]" value="<%= hotel.name %>" required>
+                </div>
+                <div class="form-group">
+                    <label>Hotel's Image URL: </label>
+                    <input class="form-control" type="text" name="hotel[image]" value="<%= hotel.image %>" required>
+                </div>
+                <div class="form-group">
+                    <label>Cost per night: </label>
+                    <input class="form-control" type="number" name="hotel[cost]" value="<%= hotel.cost %>" step="500" min="500" required>
+                </div>
+                <div class="form-group">
+                    <label>Description: </label>
+                    <input class="form-control" type="text" name="hotel[description]" value="<%= hotel.description %>" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/hotel_list">Go Back</a>
+        </div>
+    </div>
+
+
+<% include ../partials/footer %>
+

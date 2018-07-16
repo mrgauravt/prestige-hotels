@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+    
+    <header class="jumbotron">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-king"></span> Welcome to Prestige Hotels!</h1>
+            <p>Get details of Prestige Hotels from all over India</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/hotel_list/new">Add a New Hotel information</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% for(var i = 0; i < hotel_list.length; i++) { %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src=" <%= hotel_list[i].image %> ">
+                        <div class="caption">
+                            <h4> <%= hotel_list[i].name %> </h4>
+                        </div>
+                        <p>
+                            <a href="/hotel_list/<%= hotel_list[i]._id %>" class="btn btn-primary">More Info</a>
+                        </p>
+                    </div>
+                </div>
+        <% } %>
+    </div>
+
+<% include ../partials/footer %>

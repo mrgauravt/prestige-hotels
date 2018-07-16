@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+    <div class="row">
+        <h1 style="text-align:center;">Add a New Hotel information</h1>
+        <div style="width: 30%; margin: 30px auto;">
+            <form action="/hotel_list" method="POST">
+                <div class="form-group">
+                    <label>Hotel's Name: </label>
+                    <input class="form-control" type="text" name="name" placeholder="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Hotel's Image URL: </label>
+                    <input class="form-control" type="text" name="image" placeholder="image URL" required>
+                </div>
+                <div class="form-group">
+                    <label>Cost per night: </label>
+                    <input class="form-control" type="number" name="cost" placeholder="cost" step="500" min="500" required>
+                </div>
+                <div class="form-group">
+                    <label>Description: </label>
+                    <input class="form-control" type="text" name="description" placeholder="description" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/hotel_list">Back to Hotel's List</a>
+        </div>
+    </div>
+
+<% include ../partials/footer %>

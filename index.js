@@ -49,6 +49,6 @@ index.use("/", authRoutes);
 index.use("/hotel_list", hotelRoutes);
 index.use("/hotel_list/:id/comments", commentRoutes);
 
-index.listen(process.env.PORT || "5500", process.env.IP || "127.0.0.1", function () {
+index.listen(process.env.PORT, process.env.IP, function () {
     console.log("Server has started!!");
 });
